@@ -1,8 +1,2 @@
 /node_modules
 /res/temp
-/user/config.json
-/user/state.json
-/user/users.json
-/user/res/
-/user/logs/
-/user/crashes/
