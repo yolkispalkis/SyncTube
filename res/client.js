@@ -986,7 +986,7 @@ client_Main.prototype = {
 		var _gthis = this;
 		var protocol = "ws:";
 		if(window.location.protocol == "https:") {
-			protocol = "wss:";
+			protocol = "ws:";
 		}
 		this.ws = new WebSocket("" + protocol + "//" + host + ":" + port);
 		this.ws.onmessage = $bind(this,this.onMessage);
