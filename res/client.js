@@ -985,10 +985,11 @@ client_Main.prototype = {
 	,openWebSocket: function(host,port) {
 		var _gthis = this;
 		var protocol = "ws:";
+		var chatprotocol = "ws:";
 		if(window.location.protocol == "https:") {
-			protocol = "ws:";
+			protocol = "wss:";
 		}
-		this.ws = new WebSocket("" + protocol + "//" + host + ":" + port);
+		this.ws = new WebSocket("" + chatprotocol + "//" + host + ":" + port);
 		this.ws.onmessage = $bind(this,this.onMessage);
 		this.ws.onopen = function() {
 			_gthis.serverMessage(1);
